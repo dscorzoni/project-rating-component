@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    --primary: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightgrey: hsl(217, 12%, 63%);
+    --medgrey: hsl(216, 12%, 54%);
+    --darkblue: hsl(214, 14%, 23%);
+    --verydarkblue: hsl(216, 12%, 8%);
+    font-weight: 400;
+    line-height: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--verydarkblue);
+    color: var(--white);
+}
+
+article {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background: linear-gradient(-45deg, var(--darkblue), var(--verydarkblue));
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.star-icon {
+    background-color: hsla(212, 16%, 23%, 0.608);
+    width: 45px;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 25px;
+    padding: 1rem 0rem;
+}
+
+p {
+    padding: 1rem 0rem;
+    color: var(--medgrey);
+    line-height: 1.5rem;
+}
+
+.rating-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
+.box {
+    background-color: hsla(212, 16%, 23%, 0.608);
+    color: var(--lightgrey);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    line-height: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+}
+
+input[type="radio"] {
+    display: none;    
+}
+
+input[type="radio"]:checked + .box {
+    background-color: var(--lightgrey);
+    color: var(--white);
+}
+
+input[type="radio"]:hover + .box {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+input[type="radio"]:focus + .box {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+input[type="radio"]:active + .box {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+
+
+
+
+button {
+    border: none;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    letter-spacing: 3px;
+    color: var(--white);
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.result-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    text-align: center;
+}
+
+.result-page .result-summary {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    line-height: normal;
+    background-color: var(--darkblue);
+    color: var(--primary);
+    border-radius: 1rem;
+}
+
+.result-page h1 {
+    line-height: normal;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.attribution { 
+    text-align: center; 
+    padding: 1rem;
+}
+.attribution a { 
+    text-decoration: none;
+    color: var(--primary); 
+}
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+    .attribution {
+        display: none;
+    }
+}
